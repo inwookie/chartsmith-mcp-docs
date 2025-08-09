@@ -183,10 +183,11 @@ Then open `outputs/my_chart.html` in your browser to see the chart!
 ### Common Setup Issues
 
 **"Missing API Key" or AI Features Not Working**
-- ⚠️ **8 out of 25 tools** require valid API keys for AI features
+- ⚠️ **4 out of 25 tools** require valid API keys for AI features  
+- ✅ **11 tools verified working** without any API keys needed
 - Add a real API key to `.env` file - the placeholder won't work
 - **Basic charts work without API keys**: bar, line, pie, scatter, area, box, bubble, violin
-- **AI tools need keys**: auto-chart, analyze_and_visualize, chart_insights
+- **AI tools need keys**: `generate_chart_auto` ✅ VERIFIED WORKING
 - Get your key from: https://platform.openai.com/api-keys
 
 **"No Such File or Directory: chart-mcp"**

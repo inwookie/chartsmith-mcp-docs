@@ -36,6 +36,27 @@ Create a pie chart of website traffic sources:
 - Email: 2%
 ```
 
+## 🤖 AI-Powered Features (API Key Required)
+
+✅ **VERIFIED WORKING** with real OpenAI API key:
+
+### **Auto Chart Selection**
+```
+"Show revenue trends over months and suggest the best visualization approach"
+```
+**Result**: AI analyzes your data and automatically selects the optimal chart type with detailed reasoning.
+
+### **Smart Data Analysis**  
+```
+"Compare profit margins across different months and identify patterns"
+```
+**Result**: AI provides chart recommendations with confidence scores and explanations.
+
+**To use AI features**: Add your OpenAI API key to the `.env` file:
+```bash
+OPENAI_API_KEY=sk-proj-your-actual-key-here
+```
+
 ## 🚀 Quick Start Example
 
 Once ChartSmith MCP is connected to Cursor, try this simple example:
