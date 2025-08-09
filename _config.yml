@@ -13,10 +13,20 @@ plugins:
   - jekyll-seo-tag
 
 permalink: pretty
-show_excerpts: true
+show_excerpts: false
+
+# Limit header navigation to essential pages
+header_pages:
+  - getting-started/installation.md
+  - getting-started/first-chart.md
+  - examples/chart-gallery.md
+  - api/README.md
+  - deployment/docker.md
 
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
   - vendor/
+  - README.md
+  - test_mcp.py
