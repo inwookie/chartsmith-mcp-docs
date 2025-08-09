@@ -10,6 +10,9 @@ Explore the stunning visualizations you can create with ChartSmith MCP.
 ## 🎯 Basic Charts
 
 ### 📊 Bar Charts
+
+<iframe src="/chartsmith-mcp-docs/assets/gallery/bar.html" title="Bar Chart" style="width:100%;height:420px;border:1px solid #eee;border-radius:8px;"></iframe>
+
 Perfect for comparing categories and showing rankings.
 
 **Use Cases:**
@@ -36,6 +39,9 @@ Create a bar chart showing our Q4 sales performance:
 ---
 
 ### 📈 Line Charts
+
+<iframe src="/chartsmith-mcp-docs/assets/gallery/line.html" title="Line Chart" style="width:100%;height:420px;border:1px solid #eee;border-radius:8px;"></iframe>
+
 Ideal for showing trends and changes over time.
 
 **Use Cases:**
@@ -60,6 +66,9 @@ Jul: 2100, Aug: 2280, Sep: 2450, Oct: 2600, Nov: 2780, Dec: 3000
 ---
 
 ### 🥧 Pie Charts
+
+<iframe src="/chartsmith-mcp-docs/assets/gallery/pie.html" title="Pie Chart" style="width:100%;height:420px;border:1px solid #eee;border-radius:8px;"></iframe>
+
 Show proportions and parts of a whole.
 
 **Use Cases:**
@@ -87,6 +96,9 @@ Create a pie chart of our marketing budget allocation:
 ---
 
 ### 🔗 Scatter Plots
+
+<iframe src="/chartsmith-mcp-docs/assets/gallery/scatter.html" title="Scatter Plot" style="width:100%;height:420px;border:1px solid #eee;border-radius:8px;"></iframe>
+
 Reveal correlations and relationships between variables.
 
 **Use Cases:**
@@ -113,6 +125,9 @@ Show the relationship between advertising spend and sales revenue:
 ## 🎨 Advanced Visualizations
 
 ### 🔥 Heatmaps
+
+<iframe src="/chartsmith-mcp-docs/assets/gallery/heatmap.html" title="Heatmap" style="width:100%;height:420px;border:1px solid #eee;border-radius:8px;"></iframe>
+
 Perfect for matrix data and correlation analysis.
 
 **Use Cases:**
@@ -138,6 +153,9 @@ Create a heatmap showing customer satisfaction scores across:
 ---
 
 ### 🌳 Treemaps
+
+<iframe src="/chartsmith-mcp-docs/assets/gallery/treemap.html" title="Treemap" style="width:100%;height:420px;border:1px solid #eee;border-radius:8px;"></iframe>
+
 Visualize hierarchical data with nested rectangles.
 
 **Use Cases:**
@@ -163,6 +181,9 @@ Show our revenue breakdown by:
 ---
 
 ### 🌊 Sankey Diagrams
+
+<iframe src="/chartsmith-mcp-docs/assets/gallery/sankey.html" title="Sankey Diagram" style="width:100%;height:420px;border:1px solid #eee;border-radius:8px;"></iframe>
+
 Show flow and movement between stages.
 
 **Use Cases:**
@@ -188,7 +209,10 @@ Show the conversion rates at each stage
 
 ## 📊 Statistical Charts
 
-### 📦 Box Plots
+### �� Box Plots
+
+<iframe src="/chartsmith-mcp-docs/assets/gallery/boxplot.html" title="Box Plot" style="width:100%;height:420px;border:1px solid #eee;border-radius:8px;"></iframe>
+
 Display distribution statistics and identify outliers.
 
 **Use Cases:**
@@ -214,6 +238,9 @@ Create box plots comparing response times across:
 ---
 
 ### 📊 Histograms
+
+<iframe src="/chartsmith-mcp-docs/assets/gallery/histogram.html" title="Histogram" style="width:100%;height:420px;border:1px solid #eee;border-radius:8px;"></iframe>
+
 Show frequency distributions and data patterns.
 
 **Use Cases:**
@@ -241,6 +268,9 @@ Show the distribution of customer order values:
 ## 🎯 Interactive Features
 
 ### 📊 Dashboards
+
+<iframe src="/chartsmith-mcp-docs/assets/gallery/dashboard.html" title="Dashboard" style="width:100%;height:420px;border:1px solid #eee;border-radius:8px;"></iframe>
+
 Combine multiple charts for comprehensive analysis.
 
 **Example Request:**
