@@ -23,7 +23,19 @@ Perfect for comparing categories and showing rankings.
 
 **Tool Input Example (`generate_bar_chart`):**
 ```json
-{ "data": {"rows": [{"region":"North","sales":125000},{"region":"South","sales":98000},{"region":"East","sales":156000},{"region":"West","sales":87000}]}, "x":"region", "y":"sales", "format":"html" }
+{
+  "data": {
+    "rows": [
+      {"region": "North", "sales": 125000},
+      {"region": "South", "sales": 98000},
+      {"region": "East",  "sales": 156000},
+      {"region": "West",  "sales": 87000}
+    ]
+  },
+  "x": "region",
+  "y": "sales",
+  "format": "html"
+}
 ```
 
 **Features:**
@@ -48,7 +60,26 @@ Ideal for showing trends and changes over time.
 
 **Tool Input Example (`generate_line_chart`):**
 ```json
-{ "data": {"rows": [{"month":"Jan","users":1200},{"month":"Feb","users":1350},{"month":"Mar","users":1420},{"month":"Apr","users":1580},{"month":"May","users":1750},{"month":"Jun","users":1890},{"month":"Jul","users":2100},{"month":"Aug","users":2280},{"month":"Sep","users":2450},{"month":"Oct","users":2600},{"month":"Nov","users":2780},{"month":"Dec","users":3000}]}, "x":"month", "y":"users" }
+{
+  "data": {
+    "rows": [
+      {"month": "Jan", "users": 1200},
+      {"month": "Feb", "users": 1350},
+      {"month": "Mar", "users": 1420},
+      {"month": "Apr", "users": 1580},
+      {"month": "May", "users": 1750},
+      {"month": "Jun", "users": 1890},
+      {"month": "Jul", "users": 2100},
+      {"month": "Aug", "users": 2280},
+      {"month": "Sep", "users": 2450},
+      {"month": "Oct", "users": 2600},
+      {"month": "Nov", "users": 2780},
+      {"month": "Dec", "users": 3000}
+    ]
+  },
+  "x": "month",
+  "y": "users"
+}
 ```
 
 **Features:**
@@ -73,7 +104,19 @@ Show proportions and parts of a whole.
 
 **Tool Input Example (`generate_pie_chart`):**
 ```json
-{ "data": {"rows": [{"channel":"Digital Ads","pct":45},{"channel":"Content","pct":25},{"channel":"Events","pct":15},{"channel":"SEO/Analytics","pct":10},{"channel":"Other","pct":5}]}, "names":"channel", "values":"pct" }
+{
+  "data": {
+    "rows": [
+      {"channel": "Digital Ads",    "pct": 45},
+      {"channel": "Content",        "pct": 25},
+      {"channel": "Events",         "pct": 15},
+      {"channel": "SEO/Analytics",  "pct": 10},
+      {"channel": "Other",          "pct": 5}
+    ]
+  },
+  "names": "channel",
+  "values": "pct"
+}
 ```
 
 **Features:**
@@ -98,7 +141,19 @@ Reveal correlations and relationships between variables.
 
 **Tool Input Example (`generate_scatter_chart`):**
 ```json
-{ "data": {"rows": [{"ad_spend":5000,"sales":125000},{"ad_spend":7500,"sales":142000},{"ad_spend":6200,"sales":135000},{"ad_spend":8900,"sales":165000},{"ad_spend":4100,"sales":118000}]}, "x":"ad_spend", "y":"sales" }
+{
+  "data": {
+    "rows": [
+      {"ad_spend": 5000, "sales": 125000},
+      {"ad_spend": 7500, "sales": 142000},
+      {"ad_spend": 6200, "sales": 135000},
+      {"ad_spend": 8900, "sales": 165000},
+      {"ad_spend": 4100, "sales": 118000}
+    ]
+  },
+  "x": "ad_spend",
+  "y": "sales"
+}
 ```
 
 **Features:**
@@ -125,7 +180,18 @@ Perfect for matrix data and correlation analysis.
 
 **Tool Input Example (`generate_heatmap_chart`):**
 ```json
-{ "data": {"rows": [{"x":"Product A","y":"Support","value":4.5},{"x":"Product A","y":"Onboarding","value":4.2},{"x":"Product B","y":"Support","value":3.8}]}, "x":"x", "y":"y", "value":"value" }
+{
+  "data": {
+    "rows": [
+      {"x": "Product A", "y": "Support",    "value": 4.5},
+      {"x": "Product A", "y": "Onboarding", "value": 4.2},
+      {"x": "Product B", "y": "Support",    "value": 3.8}
+    ]
+  },
+  "x": "x",
+  "y": "y",
+  "value": "value"
+}
 ```
 
 **Features:**
@@ -150,7 +216,17 @@ Visualize hierarchical data with nested rectangles.
 
 **Tool Input Example (`generate_treemap_chart`):**
 ```json
-{ "data": {"rows": [{"unit":"Enterprise","category":"Security","value":120},{"unit":"Enterprise","category":"Analytics","value":80},{"unit":"SMB","category":"Productivity","value":60}]}, "path":["unit","category"], "value":"value" }
+{
+  "data": {
+    "rows": [
+      {"unit": "Enterprise", "category": "Security",     "value": 120},
+      {"unit": "Enterprise", "category": "Analytics",    "value": 80},
+      {"unit": "SMB",        "category": "Productivity", "value": 60}
+    ]
+  },
+  "path": ["unit", "category"],
+  "value": "value"
+}
 ```
 
 **Features:**
@@ -175,7 +251,19 @@ Show flow and movement between stages.
 
 **Tool Input Example (`generate_sankey_chart`):**
 ```json
-{ "data": {"rows": [{"source":"Visitors","target":"Leads","value":27680},{"source":"Leads","target":"QL","value":5520},{"source":"QL","target":"Opps","value":2760},{"source":"Opps","target":"Purchases","value":1380}]}, "source":"source", "target":"target", "value":"value" }
+{
+  "data": {
+    "rows": [
+      {"source": "Visitors",  "target": "Leads",      "value": 27680},
+      {"source": "Leads",     "target": "QL",         "value": 5520},
+      {"source": "QL",        "target": "Opps",       "value": 2760},
+      {"source": "Opps",      "target": "Purchases",  "value": 1380}
+    ]
+  },
+  "source": "source",
+  "target": "target",
+  "value": "value"
+}
 ```
 
 **Features:**
@@ -202,7 +290,18 @@ Display distribution statistics and identify outliers.
 
 **Tool Input Example (`generate_box_chart`):**
 ```json
-{ "data": {"rows": [{"region":"us-east","response_ms":120},{"region":"us-east","response_ms":132},{"region":"eu-west","response_ms":150},{"region":"eu-west","response_ms":141}]}, "x":"region", "y":"response_ms" }
+{
+  "data": {
+    "rows": [
+      {"region": "us-east", "response_ms": 120},
+      {"region": "us-east", "response_ms": 132},
+      {"region": "eu-west", "response_ms": 150},
+      {"region": "eu-west", "response_ms": 141}
+    ]
+  },
+  "x": "region",
+  "y": "response_ms"
+}
 ```
 
 **Features:**
@@ -227,7 +326,16 @@ Show frequency distributions and data patterns.
 
 **Tool Input Example (`generate_histogram_chart` pre-binned):**
 ```json
-{ "data": {"rows": [{"bin_start":0,"bin_end":50,"bin_center":25,"count":12,"frequency":0.24,"percentage":24},{"bin_start":50,"bin_end":100,"bin_center":75,"count":22,"frequency":0.44,"percentage":44},{"bin_start":100,"bin_end":150,"bin_center":125,"count":16,"frequency":0.32,"percentage":32}]}, "x":"bin_center" }
+{
+  "data": {
+    "rows": [
+      {"bin_start": 0,   "bin_end": 50,  "bin_center": 25,  "count": 12, "frequency": 0.24, "percentage": 24},
+      {"bin_start": 50,  "bin_end": 100, "bin_center": 75,  "count": 22, "frequency": 0.44, "percentage": 44},
+      {"bin_start": 100, "bin_end": 150, "bin_center": 125, "count": 16, "frequency": 0.32, "percentage": 32}
+    ]
+  },
+  "x": "bin_center"
+}
 ```
 
 **Features:**
@@ -246,13 +354,17 @@ Show frequency distributions and data patterns.
 
 Combine multiple charts for comprehensive analysis.
 
-**Example Request:**
-```
-Create a sales dashboard with:
-1. Monthly revenue trend (line chart)
-2. Top products by sales (bar chart)
-3. Regional performance (map/heatmap)
-4. Customer segments (pie chart)
+**Tool Input Example (`create_dashboard`):**
+```json
+{
+  "charts": [
+    {"chart_type": "line", "data": {"rows": [{"month":"Jan","revenue":50000},{"month":"Feb","revenue":55000},{"month":"Mar","revenue":62000}]}},
+    {"chart_type": "bar",  "data": {"rows": [{"product":"A","sales":150000},{"product":"B","sales":120000},{"product":"C","sales":98000}]}},
+    {"chart_type": "heatmap", "data": {"rows": [{"x":"North","y":"Q1","value":120},{"x":"North","y":"Q2","value":135},{"x":"South","y":"Q1","value":98}]}},
+    {"chart_type": "pie", "data": {"rows": [{"segment":"Organic","pct":45},{"segment":"Social","pct":25},{"segment":"Direct","pct":20},{"segment":"Paid","pct":8},{"segment":"Email","pct":2}]}, "names": "segment", "values": "pct"}
+  ],
+  "layout": "grid"
+}
 ```
 
 **Features:**
