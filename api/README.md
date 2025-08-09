@@ -206,7 +206,7 @@ ChartSmith MCP provides 20+ powerful tools for chart generation and data analysi
 
 ---
 
-#### `generate_scatter_plot`
+#### `generate_scatter_chart`
 **Description**: Creates scatter plots for correlation analysis and relationship visualization.
 
 **Parameters**:
@@ -232,7 +232,7 @@ ChartSmith MCP provides 20+ powerful tools for chart generation and data analysi
 
 ---
 
-#### `generate_heatmap`
+#### `generate_heatmap_chart`
 **Description**: Creates heatmaps for matrix data and correlation visualization.
 
 **Parameters**:

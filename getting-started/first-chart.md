@@ -134,8 +134,8 @@ When you type in Cursor, you'll see these ChartSmith tools:
 - `generate_bar_chart` - Create bar/column charts
 - `generate_line_chart` - Time series and trends
 - `generate_pie_chart` - Pie and donut charts
-- `generate_scatter_plot` - Correlation analysis
-- `generate_heatmap` - Matrix visualizations
+- `generate_scatter_chart` - Correlation analysis
+- `generate_heatmap_chart` - Matrix visualizations
 
 ### AI Analysis
 - `detect_optimal_chart` - Get AI recommendations

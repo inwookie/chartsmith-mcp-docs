@@ -7,6 +7,9 @@ markdown: kramdown
 highlighter: rouge
 theme: minima
 
+kramdown:
+  input: GFM
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
