@@ -21,13 +21,9 @@ Perfect for comparing categories and showing rankings.
 - Survey responses
 - Budget allocations
 
-**Example Request:**
-```
-Create a bar chart showing our Q4 sales performance:
-- North Region: $125,000
-- South Region: $98,000  
-- East Region: $156,000
-- West Region: $87,000
+**Tool Input Example (`generate_bar_chart`):**
+```json
+{ "data": {"rows": [{"region":"North","sales":125000},{"region":"South","sales":98000},{"region":"East","sales":156000},{"region":"West","sales":87000}]}, "x":"region", "y":"sales", "format":"html" }
 ```
 
 **Features:**
@@ -50,11 +46,9 @@ Ideal for showing trends and changes over time.
 - Temperature variations
 - Growth metrics
 
-**Example Request:**
-```
-Show our monthly active users growth over the past year:
-Jan: 1200, Feb: 1350, Mar: 1420, Apr: 1580, May: 1750, Jun: 1890
-Jul: 2100, Aug: 2280, Sep: 2450, Oct: 2600, Nov: 2780, Dec: 3000
+**Tool Input Example (`generate_line_chart`):**
+```json
+{ "data": {"rows": [{"month":"Jan","users":1200},{"month":"Feb","users":1350},{"month":"Mar","users":1420},{"month":"Apr","users":1580},{"month":"May","users":1750},{"month":"Jun","users":1890},{"month":"Jul","users":2100},{"month":"Aug","users":2280},{"month":"Sep","users":2450},{"month":"Oct","users":2600},{"month":"Nov","users":2780},{"month":"Dec","users":3000}]}, "x":"month", "y":"users" }
 ```
 
 **Features:**
@@ -77,14 +71,9 @@ Show proportions and parts of a whole.
 - Survey demographics
 - Resource allocation
 
-**Example Request:**
-```
-Create a pie chart of our marketing budget allocation:
-- Digital Ads: 45%
-- Content Marketing: 25%
-- Events & Conferences: 15%
-- SEO & Analytics: 10%
-- Other: 5%
+**Tool Input Example (`generate_pie_chart`):**
+```json
+{ "data": {"rows": [{"channel":"Digital Ads","pct":45},{"channel":"Content","pct":25},{"channel":"Events","pct":15},{"channel":"SEO/Analytics","pct":10},{"channel":"Other","pct":5}]}, "names":"channel", "values":"pct" }
 ```
 
 **Features:**
@@ -107,11 +96,9 @@ Reveal correlations and relationships between variables.
 - Quality vs. satisfaction metrics
 - Risk vs. return analysis
 
-**Example Request:**
-```
-Show the relationship between advertising spend and sales revenue:
-- Include trend line and correlation coefficient
-- Highlight outliers and interesting patterns
+**Tool Input Example (`generate_scatter_chart`):**
+```json
+{ "data": {"rows": [{"ad_spend":5000,"sales":125000},{"ad_spend":7500,"sales":142000},{"ad_spend":6200,"sales":135000},{"ad_spend":8900,"sales":165000},{"ad_spend":4100,"sales":118000}]}, "x":"ad_spend", "y":"sales" }
 ```
 
 **Features:**
@@ -136,12 +123,9 @@ Perfect for matrix data and correlation analysis.
 - Geographic heat mapping
 - Time-based activity patterns
 
-**Example Request:**
-```
-Create a heatmap showing customer satisfaction scores across:
-- Different product categories (rows)
-- Various service touchpoints (columns)
-- Color intensity based on satisfaction ratings
+**Tool Input Example (`generate_heatmap_chart`):**
+```json
+{ "data": {"rows": [{"x":"Product A","y":"Support","value":4.5},{"x":"Product A","y":"Onboarding","value":4.2},{"x":"Product B","y":"Support","value":3.8}]}, "x":"x", "y":"y", "value":"value" }
 ```
 
 **Features:**
@@ -164,12 +148,9 @@ Visualize hierarchical data with nested rectangles.
 - Organizational structures
 - Market segment analysis
 
-**Example Request:**
-```
-Show our revenue breakdown by:
-- Business unit (top level)
-- Product category (second level)  
-- Individual products (leaf level)
+**Tool Input Example (`generate_treemap_chart`):**
+```json
+{ "data": {"rows": [{"unit":"Enterprise","category":"Security","value":120},{"unit":"Enterprise","category":"Analytics","value":80},{"unit":"SMB","category":"Productivity","value":60}]}, "path":["unit","category"], "value":"value" }
 ```
 
 **Features:**
@@ -192,11 +173,9 @@ Show flow and movement between stages.
 - Supply chain visualization
 - Process optimization
 
-**Example Request:**
-```
-Visualize our sales funnel flow:
-Website Visitors → Leads → Qualified Leads → Opportunities → Closed Deals
-Show the conversion rates at each stage
+**Tool Input Example (`generate_sankey_chart`):**
+```json
+{ "data": {"rows": [{"source":"Visitors","target":"Leads","value":27680},{"source":"Leads","target":"QL","value":5520},{"source":"QL","target":"Opps","value":2760},{"source":"Opps","target":"Purchases","value":1380}]}, "source":"source", "target":"target", "value":"value" }
 ```
 
 **Features:**
@@ -221,12 +200,9 @@ Display distribution statistics and identify outliers.
 - Salary range analysis
 - Test score distributions
 
-**Example Request:**
-```
-Create box plots comparing response times across:
-- Different server regions
-- Various time periods
-- Show median, quartiles, and outliers
+**Tool Input Example (`generate_box_chart`):**
+```json
+{ "data": {"rows": [{"region":"us-east","response_ms":120},{"region":"us-east","response_ms":132},{"region":"eu-west","response_ms":150},{"region":"eu-west","response_ms":141}]}, "x":"region", "y":"response_ms" }
 ```
 
 **Features:**
@@ -249,12 +225,9 @@ Show frequency distributions and data patterns.
 - Quality measurements
 - Risk assessment
 
-**Example Request:**
-```
-Show the distribution of customer order values:
-- Bin the data into appropriate ranges
-- Highlight the most common order sizes
-- Include statistical summary
+**Tool Input Example (`generate_histogram_chart` pre-binned):**
+```json
+{ "data": {"rows": [{"bin_start":0,"bin_end":50,"bin_center":25,"count":12,"frequency":0.24,"percentage":24},{"bin_start":50,"bin_end":100,"bin_center":75,"count":22,"frequency":0.44,"percentage":44},{"bin_start":100,"bin_end":150,"bin_center":125,"count":16,"frequency":0.32,"percentage":32}]}, "x":"bin_center" }
 ```
 
 **Features:**
