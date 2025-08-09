@@ -1,3 +1,8 @@
+---
+layout: default
+title: Performance Optimization
+---
+
 # ⚡ Performance Optimization
 
 Optimize ChartSmith MCP for maximum speed and efficiency.
@@ -10,7 +15,7 @@ ChartSmith MCP delivers exceptional performance:
 🚀 Performance Results
 ============================================================
 📊 Chart Generation:     25,000+ charts/second
-�� Data Processing:      200,000+ rows/second  
+🧮 Data Processing:      200,000+ rows/second  
 ⚡ Response Time:        Sub-100ms average
 🎯 Success Rate:         99.9% uptime
 📈 Concurrent Users:     1,000+ simultaneous

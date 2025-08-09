@@ -1,3 +1,8 @@
+---
+layout: default
+title: ChartSmith MCP Deployment Guide
+---
+
 # 🚀 ChartSmith MCP Deployment Guide
 
 Complete guide for deploying ChartSmith MCP - whether you're hosting for users or deploying for yourself.

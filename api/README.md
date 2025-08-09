@@ -1,3 +1,8 @@
+---
+layout: default
+title: API Reference
+---
+
 # 📡 API Reference
 
 Complete technical documentation for ChartSmith MCP tools and resources.
@@ -295,7 +300,7 @@ ChartSmith MCP provides 20+ powerful tools for chart generation and data analysi
 
 ---
 
-## �� Data Formats
+## 🧾 Data Formats
 
 ### Supported Input Formats
 

@@ -33,7 +33,7 @@ ChartSmith MCP provides **20+ powerful chart generation tools**:
 
 ## 📚 Documentation Sections
 
-### �� [Getting Started](getting-started/)
+### 🚀 [Getting Started](getting-started/)
 Perfect for new users wanting to get up and running quickly.
 
 ### 🏗️ [Deployment](deployment/)

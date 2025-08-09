@@ -1,3 +1,8 @@
+---
+layout: default
+title: ChartSmith MCP Documentation
+---
+
 # 📊 ChartSmith MCP Documentation
 
 **Complete documentation for ChartSmith MCP - The high-performance chart generation server**

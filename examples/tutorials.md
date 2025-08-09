@@ -1,3 +1,8 @@
+---
+layout: default
+title: Tutorials & Use Cases
+---
+
 # 📚 Tutorials & Use Cases
 
 Step-by-step tutorials for common ChartSmith MCP use cases.

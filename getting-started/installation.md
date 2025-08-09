@@ -1,3 +1,8 @@
+---
+layout: default
+title: Installation Guide
+---
+
 # 🚀 Installation Guide
 
 Get ChartSmith MCP up and running in minutes.

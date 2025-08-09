@@ -1,3 +1,8 @@
+---
+layout: default
+title: Create Your First Chart
+---
+
 # 📊 Create Your First Chart
 
 Let's create your first chart with ChartSmith MCP!
@@ -150,7 +155,7 @@ West,87000,17400
 Great job! You've created your first chart. Now explore:
 
 - 📈 [Chart Gallery with Examples](../examples/chart-gallery.md)
-- �� [Advanced Configuration](../advanced/configuration.md)
+- 🔧 [Advanced Configuration](../advanced/configuration.md)
 - 📚 [Tutorials and Use Cases](../examples/tutorials.md)
 - 🚀 [Dashboard Creation](../examples/code-examples.md)
 

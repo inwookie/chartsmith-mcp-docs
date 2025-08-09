@@ -1,4 +1,9 @@
-# �� Code Examples
+---
+layout: default
+title: Code Examples
+---
+
+# 💻 Code Examples
 
 Real-world examples and code snippets for ChartSmith MCP.
 

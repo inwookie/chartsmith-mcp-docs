@@ -1,3 +1,8 @@
+---
+layout: default
+title: ChartSmith MCP - User Guide
+---
+
 # 🎯 ChartSmith MCP - User Guide
 
 Connect to ChartSmith MCP and start creating amazing charts with AI-powered insights.

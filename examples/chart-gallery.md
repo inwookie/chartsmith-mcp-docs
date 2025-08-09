@@ -1,4 +1,9 @@
-# �� Chart Gallery
+---
+layout: default
+title: Chart Gallery
+---
+
+# 🖼️ Chart Gallery
 
 Explore the stunning visualizations you can create with ChartSmith MCP.
 
@@ -132,7 +137,7 @@ Create a heatmap showing customer satisfaction scores across:
 
 ---
 
-### �� Treemaps
+### 🌳 Treemaps
 Visualize hierarchical data with nested rectangles.
 
 **Use Cases:**

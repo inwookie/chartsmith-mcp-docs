@@ -1,3 +1,8 @@
+---
+layout: default
+title: EC2 Hosting Guide
+---
+
 # 🚀 EC2 Hosting Guide
 
 Deploy ChartSmith MCP on AWS EC2 for production hosting.

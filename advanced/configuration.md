@@ -1,3 +1,8 @@
+---
+layout: default
+title: Advanced Configuration
+---
+
 # ⚙️ Advanced Configuration
 
 Configure ChartSmith MCP for optimal performance and customization.
