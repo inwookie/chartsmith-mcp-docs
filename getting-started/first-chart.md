@@ -179,6 +179,30 @@ West,87000,17400
 
 ---
 
+## 💾 Chart Outputs & File Saving
+
+ChartSmith MCP returns chart data that can be displayed in your MCP client or saved as files:
+
+### **Output Formats Available:**
+- **HTML**: Complete standalone HTML files with embedded Plotly
+- **JSON**: Plotly JSON specification for developers
+- **SVG**: Scalable vector graphics
+- **PNG**: Raster images
+
+### **How Outputs Work:**
+1. **In MCP Clients** (like Cursor): Charts display inline automatically
+2. **For File Saving**: The client receives chart data as payload
+3. **Manual Saving**: You can save the HTML/JSON payload to files
+
+### **File Saving Example:**
+When you request `format: 'html'`, ChartSmith returns a complete HTML file that you can:
+- Copy and save as `.html` 
+- Open in any web browser
+- Embed in websites
+- Share with others
+
+**Tip**: HTML output includes the full Plotly library (~4.6MB) so charts work offline!
+
 ## 🎉 What's Next?
 
 Great job! You've created your first chart. Now explore:

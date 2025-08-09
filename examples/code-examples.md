@@ -7,6 +7,26 @@ title: Code Examples
 
 Real-world examples and code snippets for ChartSmith MCP.
 
+## 💾 Chart Output Formats
+
+ChartSmith MCP supports multiple output formats:
+- **`html`**: Complete standalone HTML files (recommended for sharing)
+- **`json`**: Plotly JSON for developers/embedding  
+- **`svg`**: Vector graphics
+- **`png`**: Raster images
+
+### Example: Request HTML Output
+```
+Create a bar chart with sales data and return as HTML:
+- Product A: $150k
+- Product B: $120k  
+- Product C: $180k
+
+Format: HTML
+```
+
+**Result**: You get a complete HTML file that works in any browser!
+
 ## 🚀 Basic Chart Examples
 
 ### Simple Bar Chart

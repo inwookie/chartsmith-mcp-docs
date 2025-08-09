@@ -148,6 +148,38 @@ docker compose run --rm chartsmith-stdio python -m chart_genius_mcp --test-chart
 
 Expected output: `✅ Test chart generated successfully!`
 
+### Generate a Real Chart File
+
+Test creating an actual chart file:
+
+```bash
+# Create a test chart and save as HTML
+docker compose run --rm chartsmith-stdio python -c "
+import sys
+sys.path.append('/app/src')
+from chart_genius_mcp.server import ChartGeniusServer
+import asyncio, json
+
+async def save_chart():
+    server = ChartGeniusServer()
+    data = {'rows': [{'month': 'Jan', 'sales': 100}, {'month': 'Feb', 'sales': 120}]}
+    
+    result = await server._call_tool_handler('generate_bar_chart', {
+        'data': data, 'x': 'month', 'y': 'sales', 'format': 'html'
+    })
+    
+    response = json.loads(result[0].text)
+    if response.get('success'):
+        with open('/app/outputs/my_chart.html', 'w') as f:
+            f.write(response['payload'])
+        print('✅ Chart saved to outputs/my_chart.html')
+
+asyncio.run(save_chart())
+"
+```
+
+Then open `outputs/my_chart.html` in your browser to see the chart!
+
 ### Common Setup Issues
 
 **"Missing API Key" or AI Features Not Working**
