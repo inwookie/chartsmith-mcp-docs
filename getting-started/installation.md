@@ -32,18 +32,26 @@ npx -y @smithery/cli@latest connect "https://<YOUR_DOMAIN>/mcp"
 
 ## 🐳 Option 2: Self-Deploy with Docker
 
-Deploy ChartSmith MCP on your own infrastructure:
+### A) Prebuilt Image (Recommended)
+```bash
+# Pull and run HTTP (SSE) server on port 8000
+docker pull inwookie/chartsmith-mcp:latest
 
-### Step 1: Clone the repository
+docker run --rm \
+  -p 8000:8000 \
+  --env-file .env \
+  inwookie/chartsmith-mcp:latest \
+  python -m chart_genius_mcp --transport sse --host 0.0.0.0 --port 8000
+```
+
+### B) From Source (clone repo)
 ```bash
 git clone https://github.com/inwookie/chart-mcp.git
 cd chart-mcp
-```
-
-### Step 2: Configure Environment
-```bash
 cp env.template .env
 $EDITOR .env  # add your API keys
+
+docker compose --profile all up -d
 ```
 
 **Required settings (add your actual API key):**
@@ -55,25 +63,18 @@ OPENAI_API_KEY=sk-proj-your-actual-openai-key-here
 
 **⚠️ Important**: Replace `sk-proj-your-actual-openai-key-here` with your real OpenAI API key. Without this, AI features won't work.
 
-### Step 3: Start with Docker Compose
-```bash
-docker compose --profile all up -d
-```
-
-**Verify deployment:**
+### Verify deployment:
 ```bash
 # Check containers are running
 docker compose ps
 
-# Test HTTP endpoint
-curl http://localhost:8000/health
-# Should return: {"status":"ok"}
+# Test HTTP endpoint (SSE)
+curl http://localhost:8000/health  # -> {"status":"ok"}
 ```
 
 ### Step 4: Connect to Cursor
-
 **Option A: HTTP Connection (Recommended)**
-Your ChartSmith MCP is now running at `http://localhost:8000`. You can use any HTTP-based MCP client to connect.
+Your ChartSmith MCP is now running at `http://localhost:8000` (SSE transport). You can use any HTTP-based MCP client to connect.
 
 **Option B: STDIO Connection**
 For STDIO MCP clients, create this wrapper script:
@@ -107,7 +108,6 @@ Close and reopen Cursor to load the new MCP connection.
 
 ✅ **Installation Complete!**
 
-**What's next?**
 - 📊 [Create Your First Chart](first-chart.md)
 - 🔧 [Configure Advanced Settings](../advanced/configuration.md)
 - 💡 [View Chart Examples](../examples/chart-gallery.md)
@@ -116,33 +116,14 @@ Close and reopen Cursor to load the new MCP connection.
 
 ## 🐛 Troubleshooting
 
-### Tools Not Showing in Cursor?
-1. **Restart Cursor completely** (File → Exit, then reopen)
-2. **Check MCP connection** in Cursor settings
-3. **Verify .cursor/mcp.json** syntax is correct
-
-### Connection Failed?
-- **Hosted service**: Contact your admin for the correct URL
-- **Self-deployed**: Check containers with `docker compose ps`
-
-### Docker Issues?
-```bash
-# Check if containers are running
-docker compose ps
-
-# View logs
-docker compose logs -f
-
-# Restart services
-docker compose restart
-```
+- **Tools Not Showing**: Restart Cursor; verify `.cursor/mcp.json`
+- **Health OK but client fails**: Confirm HTTP (SSE) URL and port
+- **Docker issues**: `docker compose logs -f` then `docker compose restart`
 
 ## ✅ Test Your Installation
 
-Verify ChartSmith MCP is working:
-
 ```bash
-# Test chart generation
+# Test chart generation (from source compose)
 docker compose run --rm chartsmith-stdio python -m chart_genius_mcp --test-chart
 ```
 
