@@ -9,7 +9,7 @@ Let's create your first chart with ChartSmith MCP!
 
 ## ✅ Tested Working Examples
 
-These examples have been verified to work with ChartSmith MCP:
+These examples have been verified to work with ChartSmith MCP (no API key required):
 
 ### **Bar Chart: Sales by Region**
 ```

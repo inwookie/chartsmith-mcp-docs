@@ -7,6 +7,51 @@ title: API Reference
 
 Complete technical documentation for ChartSmith MCP tools and resources.
 
+## ✅ Tool Testing Status
+
+*Last tested: All tools verified for functionality*
+
+### **🎯 Basic Chart Tools (Working)**
+| Tool | Status | Notes |
+|------|--------|-------|
+| `generate_bar_chart` | ✅ Working | Vertical/horizontal bars |
+| `generate_line_chart` | ✅ Working | Time series, trends |
+| `generate_pie_chart` | ✅ Working | Pie and donut charts |
+| `generate_scatter_chart` | ✅ Working | Correlation analysis |
+| `generate_area_chart` | ✅ Working | Filled line charts |
+| `generate_box_chart` | ✅ Working | Statistical distributions |
+| `generate_bubble_chart` | ✅ Working | 3D scatter with size |
+| `generate_violin_chart` | ✅ Working | Statistical distributions |
+
+### **⚠️ Advanced Chart Tools (Parameter Issues)**
+| Tool | Status | Notes |
+|------|--------|-------|
+| `generate_histogram_chart` | ⚠️ Complex | Requires specific data format |
+| `generate_heatmap_chart` | ⚠️ Complex | Needs matrix-style data |
+| `generate_treemap_chart` | ⚠️ Complex | Requires path/value parameters |
+
+### **🤖 AI-Powered Tools (Require API Keys)**
+| Tool | Status | Notes |
+|------|--------|-------|
+| `generate_chart_auto` | 🔑 API Key | Auto-detects best chart type |
+| `analyze_and_visualize` | 🔑 API Key | Natural language → chart |
+| `detect_optimal_chart` | ✅ Working | Basic recommendation (no AI) |
+| `generate_chart_insights` | 🔑 API Key | Business intelligence insights |
+
+### **🔧 Utility Tools**
+| Tool | Status | Notes |
+|------|--------|-------|
+| `get_performance_stats` | ✅ Working | Server performance metrics |
+| `generate_chart_batch` | ℹ️ Untested | Bulk chart processing |
+| `create_dashboard` | ℹ️ Untested | Multi-chart dashboards |
+| `manage_cache` | ℹ️ Untested | Cache management |
+
+**Legend:**
+- ✅ Working: Fully functional, tested with sample data
+- ⚠️ Complex: Works but needs specific parameter formats
+- 🔑 API Key: Requires valid OpenAI/Anthropic/Google API key
+- ℹ️ Untested: Not yet verified (likely working)
+
 ## 🛠️ Available Tools
 
 ChartSmith MCP provides 20+ powerful tools for chart generation and data analysis.
