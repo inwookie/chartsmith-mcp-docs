@@ -315,4 +315,4 @@ CHART_PROMETHEUS_ENABLED=true
 CHART_CLOUD_STORAGE=s3://charts-bucket
 ```
 
-**Need help with configuration?** [Contact Support](mailto:support@yourcompany.com) 🚀
+**Need help with configuration?** [Open a GitHub discussion](https://github.com/inwookie/chartsmith-mcp-docs/discussions) 🚀

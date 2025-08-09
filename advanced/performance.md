@@ -160,7 +160,7 @@ CHART_COMPRESSION_TYPES=json,html,svg
 ```bash
 # Content Delivery Network
 CHART_CDN_ENABLED=true
-CHART_CDN_URL=https://cdn.yourcompany.com
+CHART_CDN_URL=https://cdn.<YOUR_DOMAIN>
 CHART_STATIC_ASSETS_CDN=true
 ```
 
@@ -329,4 +329,4 @@ python -c "import pstats; pstats.Stats('profile.stats').sort_stats('time').print
 4. **Clean up old cache data**
 5. **Optimize based on usage patterns**
 
-**Ready to optimize your ChartSmith MCP?** [Contact our performance team](mailto:performance@yourcompany.com) 🚀
+**Ready to optimize your ChartSmith MCP?** [Open a GitHub discussion](https://github.com/inwookie/chartsmith-mcp-docs/discussions) 🚀

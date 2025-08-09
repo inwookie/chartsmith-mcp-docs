@@ -14,7 +14,7 @@ Step-by-step tutorials for common ChartSmith MCP use cases.
 
 **Step 1: Connect ChartSmith MCP**
 ```bash
-npx -y @smithery/cli@latest connect "https://chartsmith.yourcompany.com/mcp"
+npx -y @smithery/cli@latest connect "https://<YOUR_DOMAIN>/mcp"
 ```
 
 **Step 2: Prepare Your Data**

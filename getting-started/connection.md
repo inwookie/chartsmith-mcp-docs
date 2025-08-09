@@ -13,7 +13,7 @@ Connect to ChartSmith MCP and start creating amazing charts with AI-powered insi
 If your organization provides a hosted ChartSmith MCP:
 
 ```bash
-npx -y @smithery/cli@latest connect "https://chartsmith.yourcompany.com/mcp"
+npx -y @smithery/cli@latest connect "https://<YOUR_DOMAIN>/mcp"
 ```
 
 ### Option 2: Connect to Self-Deployed Instance
@@ -120,7 +120,7 @@ Create a dashboard showing:
 
 ### Connection Failed?
 - **Hosted service**: Contact your admin for the correct URL
-- **Self-deployed**: Check if containers are running with `docker-compose ps`
+- **Self-deployed**: Check if containers are running with `docker compose ps`
 - **Network issues**: Verify firewall settings and port access
 
 ### Charts Not Generating?

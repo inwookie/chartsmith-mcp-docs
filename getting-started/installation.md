@@ -18,7 +18,7 @@ Get ChartSmith MCP up and running in minutes.
 The fastest way to get started:
 
 ```bash
-npx -y @smithery/cli@latest connect "https://chartsmith.yourcompany.com/mcp"
+npx -y @smithery/cli@latest connect "https://<YOUR_DOMAIN>/mcp"
 ```
 
 **That's it!** You now have access to all ChartSmith MCP tools.
@@ -34,16 +34,16 @@ npx -y @smithery/cli@latest connect "https://chartsmith.yourcompany.com/mcp"
 
 Deploy ChartSmith MCP on your own infrastructure:
 
-### Step 1: Download Distribution
+### Step 1: Clone the repository
 ```bash
-curl -L https://releases.yourcompany.com/chartsmith-mcp-latest.tar.gz | tar -xz
-cd chartsmith-mcp-distribution
+git clone https://github.com/inwookie/chartsmith-mcp.git
+cd chartsmith-mcp
 ```
 
 ### Step 2: Configure Environment
 ```bash
 cp env.template .env
-nano .env  # Add your API keys
+$EDITOR .env  # add your API keys
 ```
 
 **Required settings:**
@@ -53,9 +53,9 @@ CHART_AI_PROVIDER=openai
 OPENAI_API_KEY=sk-proj-your-key-here
 ```
 
-### Step 3: Deploy
+### Step 3: Start with Docker Compose
 ```bash
-./deploy.sh local
+docker compose up -d
 ```
 
 ### Step 4: Connect to Cursor
@@ -97,18 +97,18 @@ Close and reopen Cursor to load the new MCP connection.
 
 ### Connection Failed?
 - **Hosted service**: Contact your admin for the correct URL
-- **Self-deployed**: Check containers with `docker-compose ps`
+- **Self-deployed**: Check containers with `docker compose ps`
 
 ### Docker Issues?
 ```bash
 # Check if containers are running
-docker-compose ps
+docker compose ps
 
 # View logs
-docker-compose logs -f
+docker compose logs -f
 
 # Restart services
-docker-compose restart
+docker compose restart
 ```
 
 **Need help?** [Report an issue](https://github.com/inwookie/chartsmith-mcp-docs/issues)

@@ -35,15 +35,21 @@ title: ChartSmith MCP Documentation
 
 ### 🔗 Connect to Hosted Service
 ```bash
-npx -y @smithery/cli@latest connect "https://chartsmith.yourcompany.com/mcp"
+npx -y @smithery/cli@latest connect "https://<YOUR_DOMAIN>/mcp"
 ```
 
 ### 🐳 Self-Deploy with Docker
 ```bash
-curl -L https://releases.yourcompany.com/chartsmith-mcp-latest.tar.gz | tar -xz
-cd chartsmith-mcp-distribution
-cp env.template .env  # Add your API keys
-./deploy.sh local
+# 1) Clone the repo
+git clone https://github.com/inwookie/chartsmith-mcp.git
+cd chartsmith-mcp
+
+# 2) Configure environment
+cp env.template .env
+$EDITOR .env  # add your API keys
+
+# 3) Start with Docker Compose
+docker compose up -d
 ```
 
 **Ready to transform your data into beautiful charts?** 📊

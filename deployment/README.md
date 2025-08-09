@@ -21,7 +21,7 @@ Complete guide for deploying ChartSmith MCP - whether you're hosting for users o
 ### For Hosting Providers
 ```bash
 # Deploy on EC2 for your users
-git clone https://github.com/your-username/chartsmith-mcp.git
+git clone https://github.com/inwookie/chartsmith-mcp.git
 cd chartsmith-mcp
 cp env.template .env  # Add your API keys
 ./deploy.sh production
@@ -30,8 +30,13 @@ cp env.template .env  # Add your API keys
 ### For End Users
 ```bash
 # Self-deploy ChartSmith MCP
-curl -L https://releases.yourcompany.com/chartsmith-mcp-latest.tar.gz | tar -xz
-cd chartsmith-mcp-distribution
+# (Optional) Download prebuilt distribution if available
+# curl -L https://releases.example.com/chartsmith-mcp-latest.tar.gz | tar -xz
+# cd chartsmith-mcp-distribution
+
+# Recommended: clone the repository
+git clone https://github.com/inwookie/chartsmith-mcp.git
+cd chartsmith-mcp
 cp env.template .env  # Add your API keys
 ./deploy.sh local
 ```
@@ -45,7 +50,7 @@ cp env.template .env  # Add your API keys
 ### 🔧 Prerequisites
 
 - **AWS EC2 instance** (t3.large or larger recommended)
-- **Domain name** (e.g., chartsmith.yourcompany.com)
+- **Domain name** (e.g., charts.yourdomain.com)
 - **API keys** (OpenAI, Anthropic, or Google)
 - **Basic server admin skills**
 
@@ -54,7 +59,7 @@ cp env.template .env  # Add your API keys
 ```bash
 # On your EC2 instance
 sudo apt update
-sudo apt install -y docker.io docker-compose git
+sudo apt install -y docker.io docker-compose-plugin git
 
 # Start Docker
 sudo systemctl start docker
@@ -67,7 +72,7 @@ sudo usermod -aG docker $USER
 
 ```bash
 # Clone repository
-git clone https://github.com/your-username/chartsmith-mcp.git
+git clone https://github.com/inwookie/chartsmith-mcp.git
 cd chartsmith-mcp
 
 # Configure environment
@@ -94,19 +99,19 @@ CHART_MAX_CONCURRENCY=16  # Higher for multiple users
 # Point your domain to EC2 IP in DNS
 # Install Let's Encrypt certificates
 sudo apt install certbot
-sudo certbot certonly --standalone -d chartsmith.yourcompany.com
+sudo certbot certonly --standalone -d charts.yourdomain.com
 
 # Update SSL certificates
-cp /etc/letsencrypt/live/chartsmith.yourcompany.com/fullchain.pem ssl/chartsmith.crt
-cp /etc/letsencrypt/live/chartsmith.yourcompany.com/privkey.pem ssl/chartsmith.key
-docker-compose restart nginx
+cp /etc/letsencrypt/live/charts.yourdomain.com/fullchain.pem ssl/chartsmith.crt
+cp /etc/letsencrypt/live/charts.yourdomain.com/privkey.pem ssl/chartsmith.key
+docker compose restart nginx
 ```
 
 ### 👥 Step 4: User Access
 
 **Users connect with:**
 ```bash
-npx -y @smithery/cli@latest connect "https://chartsmith.yourcompany.com/mcp"
+npx -y @smithery/cli@latest connect "https://<YOUR_DOMAIN>/mcp"
 ```
 
 ---
@@ -131,9 +136,13 @@ This creates `chartsmith-mcp-distribution-v1.0.tar.gz` for users.
 **Users download and deploy:**
 
 ```bash
-# Download distribution
-curl -L https://releases.yourcompany.com/chartsmith-mcp-latest.tar.gz | tar -xz
-cd chartsmith-mcp-distribution
+# Download distribution (optional)
+# curl -L https://releases.example.com/chartsmith-mcp-latest.tar.gz | tar -xz
+# cd chartsmith-mcp-distribution
+
+# Or clone the repository
+git clone https://github.com/inwookie/chartsmith-mcp.git
+cd chartsmith-mcp
 
 # Configure with their API keys
 cp env.template .env
@@ -197,8 +206,8 @@ DISABLED_TOOLS=dangerous_tool1,dangerous_tool2
 
 ### View Logs
 ```bash
-docker-compose logs -f                    # All services
-docker-compose logs chartsmith-http       # HTTP service only
+docker compose logs -f                    # All services
+docker compose logs chartsmith-http       # HTTP service only
 ```
 
 ### Health Checks
@@ -210,21 +219,21 @@ curl https://your-domain.com/metrics      # Prometheus metrics
 ### Updates
 ```bash
 git pull
-docker-compose build --no-cache
-docker-compose up -d
+docker compose build --no-cache
+docker compose up -d
 ```
 
 ### Scaling
 ```bash
 # Scale HTTP service for more users
-docker-compose up --scale chartsmith-http=3 -d
+docker compose up --scale chartsmith-http=3 -d
 ```
 
 ### Stop/Restart
 ```bash
-docker-compose down                       # Stop all
-docker-compose restart                    # Restart all
-docker-compose restart chartsmith-http    # Restart HTTP only
+docker compose down                       # Stop all
+docker compose restart                    # Restart all
+docker compose restart chartsmith-http    # Restart HTTP only
 ```
 
 ---
@@ -236,19 +245,19 @@ docker-compose restart chartsmith-http    # Restart HTTP only
 #### Connection Timeouts
 ```bash
 # Check if service is running
-docker-compose ps
+docker compose ps
 
 # Check logs for errors
-docker-compose logs chartsmith-http
+docker compose logs chartsmith-http
 
 # Restart if needed
-docker-compose restart chartsmith-http
+docker compose restart chartsmith-http
 ```
 
 #### API Key Issues
 ```bash
 # Verify API keys are loaded
-docker-compose exec chartsmith-http env | grep API_KEY
+docker compose exec chartsmith-http env | grep API_KEY
 
 # Check AI functionality
 curl -X POST https://your-domain.com/health
@@ -272,7 +281,7 @@ openssl x509 -in ssl/chartsmith.crt -text -noout
 # Renew Let's Encrypt certificates
 sudo certbot renew
 cp /etc/letsencrypt/live/your-domain.com/* ssl/
-docker-compose restart nginx
+docker compose restart nginx
 ```
 
 ### Performance Optimization

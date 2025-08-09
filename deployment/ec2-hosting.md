@@ -63,14 +63,15 @@ sudo sh get-docker.sh
 sudo usermod -aG docker ubuntu
 
 # Install Docker Compose
-sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
+# Install Docker Compose plugin (if not present)
+sudo apt-get update
+sudo apt-get install -y docker-compose-plugin
 ```
 
 ### Install ChartSmith MCP
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/chartsmith-mcp.git
+git clone https://github.com/inwookie/chartsmith-mcp.git
 cd chartsmith-mcp
 
 # Configure environment
