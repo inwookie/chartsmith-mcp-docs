@@ -1,0 +1,22 @@
+title: "ChartSmith MCP Documentation"
+description: "Complete documentation for ChartSmith MCP - The high-performance chart generation server"
+url: "https://inwookie.github.io"
+baseurl: "/chartsmith-mcp-docs"
+
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+permalink: pretty
+show_excerpts: true
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
