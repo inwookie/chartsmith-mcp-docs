@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChartSmith Dashboard</title>
+  <style>
+    body { margin: 0; font-family: -apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 12px; }
+    iframe { width: 100%; height: 420px; border: 1px solid #eee; border-radius: 8px; }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <iframe src="bar.html" title="Bar Chart"></iframe>
+    <iframe src="line.html" title="Line Chart"></iframe>
+  </div>
+</body>
+</html> 
