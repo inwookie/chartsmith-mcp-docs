@@ -21,24 +21,24 @@ Complete technical documentation for ChartSmith MCP tools and resources.
 - `generate_bubble_chart`: ✅ Working — 3D scatter with size
 - `generate_violin_chart`: ✅ Working — Statistical distributions
 
-### **⚠️ Advanced Chart Tools (Parameter Issues)**
-- `generate_histogram_chart`: ⚠️ Complex — Requires specific data format
-- `generate_heatmap_chart`: ⚠️ Complex — Needs matrix-style data
-- `generate_treemap_chart`: ⚠️ Complex — Requires path/value parameters
+### **⚠️ Advanced Chart Tools (Param-specific, Verified Working)**
+- `generate_histogram_chart`: ✅ Working — Use pre-binned data and `x: "bin_center"`
+- `generate_heatmap_chart`: ✅ Working — Requires columns `x`, `y`, and `value`
+- `generate_treemap_chart`: ✅ Working — Provide `path: [..]` and `value`
 
 ### **🤖 AI-Powered Tools (Require API Keys)**
-- `generate_chart_auto`: ✅ Working 🔑 — VERIFIED: Auto‑detects best chart type with AI analysis
-- `analyze_and_visualize`: ⚠️ Complex 🔑 — Parameter format sensitive, AI works
-- `detect_optimal_chart`: ✅ Working — Basic recommendation (no AI needed)
-- `generate_chart_insights`: ⚠️ Complex 🔑 — Needs `chart_data` dict; parameter sensitive
+- `generate_chart_auto`: ✅ Working 🔑 — VERIFIED with real key (data + `user_text`)
+- `analyze_and_visualize`: ✅ Working 🔑 — VERIFIED with real key (data + `question`)
+- `detect_optimal_chart`: ✅ Working — No key needed
+- `generate_chart_insights`: ✅ Working 🔑 — Requires `chart_data` (JSON) + `data`
 
-### **🔧 Utility Tools**
-- `get_performance_stats`: ✅ Working — VERIFIED: Server performance metrics
-- `manage_cache`: ✅ Working — VERIFIED: Cache stats/clear/optimize
-- `optimize_large_dataset`: ✅ Working — VERIFIED: Dataset optimization
-- `generate_chart_batch`: ⚠️ Complex — Parameter format issues
-- `create_dashboard`: ⚠️ Complex — Parameter format issues
-- `export_chart`: ⚠️ Complex — Parameter format issues
+### **🔧 Utility Tools (Verified)**
+- `get_performance_stats`: ✅ Working — Server performance metrics
+- `manage_cache`: ✅ Working — Cache stats/clear/optimize
+- `optimize_large_dataset`: ✅ Working — Dataset optimization
+- `generate_chart_batch`: ✅ Working — Provide `datasets` + `chart_configs`
+- `create_dashboard`: ✅ Working — Provide `charts: [...]` and optional `layout`
+- `export_chart`: ✅ Working — Pass chart JSON object (not HTML) in `chart_data`
 
 **Legend:**
 - ✅ Working: **VERIFIED** - Fully functional, tested with real API key
@@ -46,10 +46,10 @@ Complete technical documentation for ChartSmith MCP tools and resources.
 - 🔑 API Key: Requires valid OpenAI/Anthropic/Google API key
 - **VERIFIED**: Tested with real OpenAI API key on live deployment
 
-## 🎯 **Testing Summary: 25 Tools Total**
-- **✅ 11 Tools Fully Working**: All basic charts + 3 AI tools + 3 utility tools
-- **⚠️ 6 Tools Complex**: Work but need specific parameter formats
-- **🔑 AI Features**: Tested and confirmed working with real OpenAI API key
+## 🎯 **Testing Summary**
+- ✅ Basic, Advanced, and Utility tools: Working with documented parameters
+- 🔑 AI features: Working with real API key (OpenAI tested)
+- 📌 See gallery and first‑chart pages for copy/paste JSON examples
 
 ## 🔧 Troubleshooting Complex Tools
 
