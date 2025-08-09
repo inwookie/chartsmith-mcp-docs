@@ -37,6 +37,7 @@ curl http://localhost:8000/health   # -> {"status":"ok"}
 
 ### Compose (prebuilt image)
 ```yaml
+# docker-compose.example.yml (see repo under deployment/)
 services:
   chartsmith-http:
     image: inwookie/chartsmith-mcp:latest
@@ -44,21 +45,17 @@ services:
     ports:
       - "8000:8000"
     env_file: .env
-    profiles: ["http"]
-
   chartsmith-stdio:
     image: inwookie/chartsmith-mcp:latest
     command: python -m chart_genius_mcp --transport stdio
-    profiles: ["stdio"]
-
   redis:
     image: redis:7-alpine
-    profiles: ["redis"]
 ```
 
-Start:
+Run:
 ```bash
-docker compose --profile all up -d
+cp deployment/docker-compose.example.yml docker-compose.yml
+docker compose up -d
 ```
 
 ## 🧩 Option B: From Source (Clone Repo)
