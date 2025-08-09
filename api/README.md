@@ -459,4 +459,4 @@ curl -X POST http://localhost:8000/mcp \
   }'
 ```
 
-**Need more technical details?** [Open a GitHub discussion](https://github.com/inwookie/chartsmith-mcp-docs/discussions) 🚀
+**Need more technical details?** [Open a GitHub discussion](https://github.com/inwookie/chart-mcp-docs/discussions) 🚀

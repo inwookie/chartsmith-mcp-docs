@@ -329,4 +329,4 @@ python -c "import pstats; pstats.Stats('profile.stats').sort_stats('time').print
 4. **Clean up old cache data**
 5. **Optimize based on usage patterns**
 
-**Ready to optimize your ChartSmith MCP?** [Open a GitHub discussion](https://github.com/inwookie/chartsmith-mcp-docs/discussions) 🚀
+**Ready to optimize your ChartSmith MCP?** [Open a GitHub discussion](https://github.com/inwookie/chart-mcp-docs/discussions) 🚀

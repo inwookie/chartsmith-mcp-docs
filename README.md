@@ -41,15 +41,15 @@ npx -y @smithery/cli@latest connect "https://<YOUR_DOMAIN>/mcp"
 ### 🐳 Self-Deploy with Docker
 ```bash
 # 1) Clone the repo
-git clone https://github.com/inwookie/chartsmith-mcp.git
-cd chartsmith-mcp
+git clone https://github.com/inwookie/chart-mcp.git
+cd chart-mcp
 
 # 2) Configure environment
 cp env.template .env
 $EDITOR .env  # add your API keys
 
 # 3) Start with Docker Compose
-docker compose up -d
+docker compose --profile all up -d
 ```
 
 **Ready to transform your data into beautiful charts?** 📊

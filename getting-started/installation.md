@@ -36,8 +36,8 @@ Deploy ChartSmith MCP on your own infrastructure:
 
 ### Step 1: Clone the repository
 ```bash
-git clone https://github.com/inwookie/chartsmith-mcp.git
-cd chartsmith-mcp
+git clone https://github.com/inwookie/chart-mcp.git
+cd chart-mcp
 ```
 
 ### Step 2: Configure Environment
@@ -46,27 +46,53 @@ cp env.template .env
 $EDITOR .env  # add your API keys
 ```
 
-**Required settings:**
+**Required settings (add your actual API key):**
 ```bash
 CHART_AI_FEATURES=true
 CHART_AI_PROVIDER=openai
-OPENAI_API_KEY=sk-proj-your-key-here
+OPENAI_API_KEY=sk-proj-your-actual-openai-key-here
 ```
+
+**⚠️ Important**: Replace `sk-proj-your-actual-openai-key-here` with your real OpenAI API key. Without this, AI features won't work.
 
 ### Step 3: Start with Docker Compose
 ```bash
-docker compose up -d
+docker compose --profile all up -d
+```
+
+**Verify deployment:**
+```bash
+# Check containers are running
+docker compose ps
+
+# Test HTTP endpoint
+curl http://localhost:8000/health
+# Should return: {"status":"ok"}
 ```
 
 ### Step 4: Connect to Cursor
-Add this to your `~/.cursor/mcp.json`:
 
+**Option A: HTTP Connection (Recommended)**
+Your ChartSmith MCP is now running at `http://localhost:8000`. You can use any HTTP-based MCP client to connect.
+
+**Option B: STDIO Connection**
+For STDIO MCP clients, create this wrapper script:
+
+1. Create `~/chartsmith-mcp.sh`:
+```bash
+#!/bin/bash
+cd /path/to/your/chart-mcp
+docker compose run --rm chartsmith-stdio python -m chart_genius_mcp --transport stdio
+```
+
+2. Make it executable: `chmod +x ~/chartsmith-mcp.sh`
+
+3. Add to `~/.cursor/mcp.json`:
 ```json
 {
   "mcpServers": {
     "chartsmith-local": {
-      "command": "docker",
-      "args": ["exec", "-i", "chartsmith-mcp", "python", "-m", "chart_genius_mcp", "--transport", "stdio"]
+      "command": "/Users/your-username/chartsmith-mcp.sh"
     }
   }
 }
@@ -111,4 +137,4 @@ docker compose logs -f
 docker compose restart
 ```
 
-**Need help?** [Report an issue](https://github.com/inwookie/chartsmith-mcp-docs/issues)
+**Need help?** [Report an issue](https://github.com/inwookie/chart-mcp-docs/issues)

@@ -13,8 +13,8 @@ Follow these steps to run ChartSmith MCP on your own machine or server.
 
 ## 1) Clone the repository
 ```bash
-git clone https://github.com/inwookie/chartsmith-mcp.git
-cd chartsmith-mcp
+git clone https://github.com/inwookie/chart-mcp.git
+cd chart-mcp
 ```
 
 ## 2) Configure environment
@@ -32,7 +32,7 @@ OPENAI_API_KEY=sk-proj-your-key-here
 
 ## 3) Start with Docker Compose
 ```bash
-docker compose up -d
+docker compose --profile all up -d
 ```
 
 Verify containers are running:
@@ -60,4 +60,4 @@ Restart Cursor, then open the MCP tools panel to see ChartSmith tools.
 - Restart services: `docker compose restart`
 - Verify API key is set: `docker compose exec chartsmith-http env | grep API_KEY`
 
-Need help? Open a discussion: https://github.com/inwookie/chartsmith-mcp-docs/discussions
+Need help? Open a discussion: https://github.com/inwookie/chart-mcp-docs/discussions

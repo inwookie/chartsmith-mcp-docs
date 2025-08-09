@@ -71,8 +71,8 @@ sudo apt-get install -y docker-compose-plugin
 ### Install ChartSmith MCP
 ```bash
 # Clone the repository
-git clone https://github.com/inwookie/chartsmith-mcp.git
-cd chartsmith-mcp
+git clone https://github.com/inwookie/chart-mcp.git
+cd chart-mcp
 
 # Configure environment
 cp env.template .env

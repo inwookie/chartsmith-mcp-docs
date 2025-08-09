@@ -21,8 +21,8 @@ Complete guide for deploying ChartSmith MCP - whether you're hosting for users o
 ### For Hosting Providers
 ```bash
 # Deploy on EC2 for your users
-git clone https://github.com/inwookie/chartsmith-mcp.git
-cd chartsmith-mcp
+git clone https://github.com/inwookie/chart-mcp.git
+cd chart-mcp
 cp env.template .env  # Add your API keys
 ./deploy.sh production
 ```
@@ -32,11 +32,11 @@ cp env.template .env  # Add your API keys
 # Self-deploy ChartSmith MCP
 # (Optional) Download prebuilt distribution if available
 # curl -L https://releases.example.com/chartsmith-mcp-latest.tar.gz | tar -xz
-# cd chartsmith-mcp-distribution
+# cd chart-mcp-distribution
 
 # Recommended: clone the repository
-git clone https://github.com/inwookie/chartsmith-mcp.git
-cd chartsmith-mcp
+git clone https://github.com/inwookie/chart-mcp.git
+cd chart-mcp
 cp env.template .env  # Add your API keys
 ./deploy.sh local
 ```
@@ -72,8 +72,8 @@ sudo usermod -aG docker $USER
 
 ```bash
 # Clone repository
-git clone https://github.com/inwookie/chartsmith-mcp.git
-cd chartsmith-mcp
+git clone https://github.com/inwookie/chart-mcp.git
+cd chart-mcp
 
 # Configure environment
 cp env.template .env
@@ -138,11 +138,11 @@ This creates `chartsmith-mcp-distribution-v1.0.tar.gz` for users.
 ```bash
 # Download distribution (optional)
 # curl -L https://releases.example.com/chartsmith-mcp-latest.tar.gz | tar -xz
-# cd chartsmith-mcp-distribution
+# cd chart-mcp-distribution
 
 # Or clone the repository
-git clone https://github.com/inwookie/chartsmith-mcp.git
-cd chartsmith-mcp
+git clone https://github.com/inwookie/chart-mcp.git
+cd chart-mcp
 
 # Configure with their API keys
 cp env.template .env

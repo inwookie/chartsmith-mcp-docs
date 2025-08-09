@@ -19,13 +19,23 @@ npx -y @smithery/cli@latest connect "https://<YOUR_DOMAIN>/mcp"
 ### Option 2: Connect to Self-Deployed Instance
 If you deployed ChartSmith MCP locally:
 
-Add this to your `~/.cursor/mcp.json`:
+**Option A: HTTP Connection (Recommended)**
+Your ChartSmith MCP is running at `http://localhost:8000`
+
+**Option B: STDIO Connection**
+Create a wrapper script `~/chartsmith-mcp.sh`:
+```bash
+#!/bin/bash
+cd /path/to/your/chart-mcp
+docker compose run --rm chartsmith-stdio python -m chart_genius_mcp --transport stdio
+```
+
+Then add to `~/.cursor/mcp.json`:
 ```json
 {
   "mcpServers": {
     "chartsmith-local": {
-      "command": "docker",
-      "args": ["exec", "-i", "chartsmith-mcp", "python", "-m", "chart_genius_mcp", "--transport", "stdio"]
+      "command": "/Users/your-username/chartsmith-mcp.sh"
     }
   }
 }

@@ -326,4 +326,4 @@ Choose a tutorial that matches your use case:
 3. **Advanced user?** Explore the AI-powered analytics tutorials
 4. **Need branded charts?** Check out the styling tutorials
 
-**Ready to become a ChartSmith expert?** [Join our community](https://github.com/inwookie/chartsmith-mcp-docs/discussions) 🚀
+**Ready to become a ChartSmith expert?** [Join our community](https://github.com/inwookie/chart-mcp-docs/discussions) 🚀
