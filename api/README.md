@@ -12,41 +12,33 @@ Complete technical documentation for ChartSmith MCP tools and resources.
 *Last tested: All tools verified for functionality*
 
 ### **🎯 Basic Chart Tools (Working)**
-| Tool | Status | Notes |
-|------|--------|-------|
-| `generate_bar_chart` | ✅ Working | Vertical/horizontal bars |
-| `generate_line_chart` | ✅ Working | Time series, trends |
-| `generate_pie_chart` | ✅ Working | Pie and donut charts |
-| `generate_scatter_chart` | ✅ Working | Correlation analysis |
-| `generate_area_chart` | ✅ Working | Filled line charts |
-| `generate_box_chart` | ✅ Working | Statistical distributions |
-| `generate_bubble_chart` | ✅ Working | 3D scatter with size |
-| `generate_violin_chart` | ✅ Working | Statistical distributions |
+- `generate_bar_chart`: ✅ Working — Vertical/horizontal bars
+- `generate_line_chart`: ✅ Working — Time series, trends
+- `generate_pie_chart`: ✅ Working — Pie and donut charts
+- `generate_scatter_chart`: ✅ Working — Correlation analysis
+- `generate_area_chart`: ✅ Working — Filled line charts
+- `generate_box_chart`: ✅ Working — Statistical distributions
+- `generate_bubble_chart`: ✅ Working — 3D scatter with size
+- `generate_violin_chart`: ✅ Working — Statistical distributions
 
 ### **⚠️ Advanced Chart Tools (Parameter Issues)**
-| Tool | Status | Notes |
-|------|--------|-------|
-| `generate_histogram_chart` | ⚠️ Complex | Requires specific data format |
-| `generate_heatmap_chart` | ⚠️ Complex | Needs matrix-style data |
-| `generate_treemap_chart` | ⚠️ Complex | Requires path/value parameters |
+- `generate_histogram_chart`: ⚠️ Complex — Requires specific data format
+- `generate_heatmap_chart`: ⚠️ Complex — Needs matrix-style data
+- `generate_treemap_chart`: ⚠️ Complex — Requires path/value parameters
 
 ### **🤖 AI-Powered Tools (Require API Keys)**
-| Tool | Status | Notes |
-|------|--------|-------|
-| `generate_chart_auto` | ✅ Working 🔑 | **VERIFIED**: Auto-detects best chart type with AI analysis |
-| `analyze_and_visualize` | ⚠️ Complex 🔑 | Parameter format issues, AI works |
-| `detect_optimal_chart` | ✅ Working | Basic recommendation (no AI needed) |
-| `generate_chart_insights` | ⚠️ Complex 🔑 | Parameter format issues, AI works |
+- `generate_chart_auto`: ✅ Working 🔑 — VERIFIED: Auto‑detects best chart type with AI analysis
+- `analyze_and_visualize`: ⚠️ Complex 🔑 — Parameter format sensitive, AI works
+- `detect_optimal_chart`: ✅ Working — Basic recommendation (no AI needed)
+- `generate_chart_insights`: ⚠️ Complex 🔑 — Needs `chart_data` dict; parameter sensitive
 
 ### **🔧 Utility Tools**
-| Tool | Status | Notes |
-|------|--------|-------|
-| `get_performance_stats` | ✅ Working | **VERIFIED**: Server performance metrics |
-| `manage_cache` | ✅ Working | **VERIFIED**: Cache stats/clear/optimize |
-| `optimize_large_dataset` | ✅ Working | **VERIFIED**: Dataset optimization |
-| `generate_chart_batch` | ⚠️ Complex | Parameter format issues |
-| `create_dashboard` | ⚠️ Complex | Parameter format issues |
-| `export_chart` | ⚠️ Complex | Parameter format issues |
+- `get_performance_stats`: ✅ Working — VERIFIED: Server performance metrics
+- `manage_cache`: ✅ Working — VERIFIED: Cache stats/clear/optimize
+- `optimize_large_dataset`: ✅ Working — VERIFIED: Dataset optimization
+- `generate_chart_batch`: ⚠️ Complex — Parameter format issues
+- `create_dashboard`: ⚠️ Complex — Parameter format issues
+- `export_chart`: ⚠️ Complex — Parameter format issues
 
 **Legend:**
 - ✅ Working: **VERIFIED** - Fully functional, tested with real API key
