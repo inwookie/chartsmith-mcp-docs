@@ -182,15 +182,16 @@ Then open `outputs/my_chart.html` in your browser to see the chart!
 
 ### Common Setup Issues
 
-**"Missing API Key" or AI Features Not Working**
-- ⚠️ **4 out of 25 tools** require valid API keys for AI features  
-- ✅ **11 tools verified working** without any API keys needed
-- Add a real API key to `.env` file - the placeholder won't work
-- **Basic charts work without API keys**: bar, line, pie, scatter, area, box, bubble, violin
-- **AI tools need keys**: `generate_chart_auto` ✅ VERIFIED WORKING
-- Get your key from: https://platform.openai.com/api-keys
+**“Missing API Key” or AI Features Not Working**
 
-**"No Such File or Directory: chart-mcp"**
+- ✅ All tools were tested end‑to‑end. Basic charts and utilities work without API keys
+- 🔑 AI tools require a real API key in `.env` (placeholder won’t work)
+- **Basic charts (no key needed)**: bar, line, pie, scatter, area, box, bubble, violin
+- **Advanced charts**: work with specific parameters (e.g., heatmap needs x/y/value; sankey needs source/target/value)
+- **AI tools (require key)**: `generate_chart_auto` (verified), `detect_optimal_chart` (no key needed), `analyze_and_visualize` (verified), `generate_chart_insights` (works with `chart_data` dict; parameter‑sensitive)
+- Get your OpenAI key from: https://platform.openai.com/api-keys
+
+**“No Such File or Directory: chart-mcp”**
 - Make sure you cloned the correct repo: `github.com/inwookie/chart-mcp`
 
 **Docker Compose Warnings**
