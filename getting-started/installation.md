@@ -137,4 +137,28 @@ docker compose logs -f
 docker compose restart
 ```
 
+## ✅ Test Your Installation
+
+Verify ChartSmith MCP is working:
+
+```bash
+# Test chart generation
+docker compose run --rm chartsmith-stdio python -m chart_genius_mcp --test-chart
+```
+
+Expected output: `✅ Test chart generated successfully!`
+
+### Common Setup Issues
+
+**"Missing API Key" or AI Features Not Working**
+- Add a real API key to `.env` file
+- The placeholder `sk-proj-your-actual-openai-key-here` won't work
+- Get your key from: https://platform.openai.com/api-keys
+
+**"No Such File or Directory: chart-mcp"**
+- Make sure you cloned the correct repo: `github.com/inwookie/chart-mcp`
+
+**Docker Compose Warnings**
+- The `version` warning is harmless and can be ignored
+
 **Need help?** [Report an issue](https://github.com/inwookie/chart-mcp-docs/issues)

@@ -7,6 +7,35 @@ title: Create Your First Chart
 
 Let's create your first chart with ChartSmith MCP!
 
+## ✅ Tested Working Examples
+
+These examples have been verified to work with ChartSmith MCP:
+
+### **Bar Chart: Sales by Region**
+```
+Create a bar chart showing sales by region:
+- North: 125,000
+- South: 98,000  
+- East: 156,000
+- West: 87,000
+```
+
+### **Line Chart: Product Performance**
+```
+Show product performance over quarters:
+Q1: Product A $45k, Q2: $52k, Q3: $48k, Q4: $55k
+```
+
+### **Pie Chart: Traffic Sources**
+```
+Create a pie chart of website traffic sources:
+- Organic Search: 45%
+- Social Media: 25%
+- Direct Traffic: 20%
+- Paid Ads: 8%
+- Email: 2%
+```
+
 ## 🚀 Quick Start Example
 
 Once ChartSmith MCP is connected to Cursor, try this simple example:
