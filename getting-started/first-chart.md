@@ -5,57 +5,185 @@ title: Create Your First Chart
 
 # 📊 Create Your First Chart
 
-Let's create your first chart with ChartSmith MCP!
+Let’s create your first chart with ChartSmith MCP!
 
-## ✅ Tested Working Examples
+## ✅ Tool Input Examples (Copy/Paste)
 
-These examples have been verified to work with ChartSmith MCP (no API key required):
+Use these inputs with the corresponding tools in your MCP client. They are minimal, tested, and work without API keys.
 
-### **Bar Chart: Sales by Region**
-```
-Create a bar chart showing sales by region:
-- North: 125,000
-- South: 98,000  
-- East: 156,000
-- West: 87,000
-```
-
-### **Line Chart: Product Performance**
-```
-Show product performance over quarters:
-Q1: Product A $45k, Q2: $52k, Q3: $48k, Q4: $55k
-```
-
-### **Pie Chart: Traffic Sources**
-```
-Create a pie chart of website traffic sources:
-- Organic Search: 45%
-- Social Media: 25%
-- Direct Traffic: 20%
-- Paid Ads: 8%
-- Email: 2%
+### Bar (generate_bar_chart)
+```json
+{
+  "data": {
+    "rows": [
+      {"region": "North", "sales": 125000},
+      {"region": "South", "sales": 98000},
+      {"region": "East",  "sales": 156000},
+      {"region": "West",  "sales": 87000}
+    ]
+  },
+  "x": "region",
+  "y": "sales",
+  "format": "html"
+}
 ```
 
-## 🤖 AI-Powered Features (API Key Required)
+### Line (generate_line_chart)
+```json
+{
+  "data": {"rows": [
+    {"month": "Jan", "value": 45},
+    {"month": "Feb", "value": 52},
+    {"month": "Mar", "value": 48},
+    {"month": "Apr", "value": 55}
+  ]},
+  "x": "month",
+  "y": "value"
+}
+```
 
-✅ **VERIFIED WORKING** with real OpenAI API key:
+### Pie (generate_pie_chart)
+```json
+{
+  "data": {"rows": [
+    {"source": "Organic", "pct": 45},
+    {"source": "Social",  "pct": 25},
+    {"source": "Direct",  "pct": 20},
+    {"source": "Paid",    "pct": 8},
+    {"source": "Email",   "pct": 2}
+  ]},
+  "names": "source",
+  "values": "pct"
+}
+```
 
-### **Auto Chart Selection**
+### Scatter (generate_scatter_chart)
+```json
+{
+  "data": {"rows": [
+    {"x": 1, "y": 3}, {"x": 2, "y": 2}, {"x": 3, "y": 4},
+    {"x": 4, "y": 3.5}, {"x": 5, "y": 5}
+  ]},
+  "x": "x",
+  "y": "y"
+}
 ```
-"Show revenue trends over months and suggest the best visualization approach"
-```
-**Result**: AI analyzes your data and automatically selects the optimal chart type with detailed reasoning.
 
-### **Smart Data Analysis**  
+### Heatmap (generate_heatmap_chart)
+```json
+{
+  "data": {"rows": [
+    {"x": "Mon", "y": "Morning", "value": 2},
+    {"x": "Mon", "y": "Evening", "value": 3},
+    {"x": "Tue", "y": "Morning", "value": 4}
+  ]},
+  "x": "x",
+  "y": "y",
+  "value": "value"
+}
 ```
-"Compare profit margins across different months and identify patterns"
-```
-**Result**: AI provides chart recommendations with confidence scores and explanations.
 
-**To use AI features**: Add your OpenAI API key to the `.env` file:
-```bash
-OPENAI_API_KEY=sk-proj-your-actual-key-here
+### Sankey (generate_sankey_chart)
+```json
+{
+  "data": {"rows": [
+    {"source": "A", "target": "B", "value": 5},
+    {"source": "B", "target": "C", "value": 3},
+    {"source": "A", "target": "C", "value": 2}
+  ]},
+  "source": "source",
+  "target": "target",
+  "value": "value"
+}
 ```
+
+### Treemap (generate_treemap_chart)
+```json
+{
+  "data": {"rows": [
+    {"cat1": "Food",    "cat2": "Fruits",     "value": 50},
+    {"cat1": "Food",    "cat2": "Vegetables", "value": 30},
+    {"cat1": "Staples", "cat2": "Grains",     "value": 20}
+  ]},
+  "path": ["cat1", "cat2"],
+  "value": "value"
+}
+```
+
+### Histogram (generate_histogram_chart)
+Pre-binned example (required by the engine):
+```json
+{
+  "data": {"rows": [
+    {"bin_start": 0,  "bin_end": 10, "bin_center": 5,  "count": 3, "frequency": 0.3, "percentage": 30},
+    {"bin_start": 10, "bin_end": 20, "bin_center": 15, "count": 5, "frequency": 0.5, "percentage": 50},
+    {"bin_start": 20, "bin_end": 30, "bin_center": 25, "count": 2, "frequency": 0.2, "percentage": 20}
+  ]},
+  "x": "bin_center"
+}
+```
+
+### Box Plot (generate_box_chart)
+```json
+{
+  "data": {"rows": [
+    {"group": "A", "value": 10},
+    {"group": "A", "value": 12},
+    {"group": "A", "value": 9},
+    {"group": "B", "value": 15},
+    {"group": "B", "value": 14}
+  ]},
+  "x": "group",
+  "y": "value"
+}
+```
+
+> Tip: If your MCP client shows a parameters form for a tool, just fill these same fields instead of pasting JSON.
+
+## 🤖 AI Tool Inputs (API Key Required)
+
+These require a valid API key. Provide both your data and text input.
+
+### Auto Chart (generate_chart_auto)
+```json
+{
+  "data": {"rows": [
+    {"month": "Jan", "revenue": 50000, "costs": 30000},
+    {"month": "Feb", "revenue": 55000, "costs": 32000},
+    {"month": "Mar", "revenue": 48000, "costs": 35000}
+  ]},
+  "user_text": "Show revenue trends over months and suggest the best visualization"
+}
+```
+
+### Analyze + Visualize (analyze_and_visualize)
+```json
+{
+  "data": {"rows": [
+    {"month": "Jan", "sales": 15000, "profit": 3000},
+    {"month": "Feb", "sales": 18000, "profit": 3600},
+    {"month": "Mar", "sales": 22000, "profit": 4400}
+  ]},
+  "question": "Create a visualization showing the relationship between sales and profit"
+}
+```
+
+### Insights (generate_chart_insights)
+1) First, generate any chart with `format: "json"` and copy its `chart` object.
+2) Then call:
+```json
+{
+  "chart_data": { /* paste the chart object here (JSON), not HTML */ },
+  "data": {"rows": [
+    {"month": "Jan", "sales": 15000, "profit": 3000},
+    {"month": "Feb", "sales": 18000, "profit": 3600},
+    {"month": "Mar", "sales": 22000, "profit": 4400}
+  ]},
+  "insight_types": ["trends", "outliers", "correlations"]
+}
+```
+
+> Note: `detect_optimal_chart` can run with only `data` (no API key required). 
 
 ## 🚀 Quick Start Example
 
