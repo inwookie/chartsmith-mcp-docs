@@ -185,53 +185,6 @@ These require a valid API key. Provide both your data and text input.
 
 > Note: `detect_optimal_chart` can run with only `data` (no API key required). 
 
-## 🚀 Quick Start Example
-
-Once ChartSmith MCP is connected to Cursor, try this simple example:
-
-### Example 1: Basic Bar Chart
-```
-Create a bar chart showing Q4 sales by region:
-- North: $125,000
-- South: $98,000  
-- East: $156,000
-- West: $87,000
-```
-
-**Result**: ChartSmith will automatically:
-- ✅ Detect this is categorical data
-- ✅ Choose a bar chart visualization  
-- ✅ Apply professional styling
-- ✅ Generate insights about regional performance
-
----
-
-## 🧠 AI-Powered Chart Creation
-
-### Natural Language Requests
-ChartSmith understands natural language. Try these:
-
-```
-"Show me website traffic trends over the last 6 months"
-```
-
-```
-"Create a pie chart of our marketing budget breakdown"
-```
-
-```
-"I have sales data - what's the best way to visualize it?"
-```
-
-### Smart Data Detection
-Upload or paste your data, and ChartSmith will:
-- 🔍 **Analyze data patterns**
-- 🎯 **Suggest optimal chart types**
-- 🎨 **Apply appropriate styling**
-- 💡 **Generate business insights**
-
----
-
 ## 📊 Chart Types Available
 
 ### Basic Charts
