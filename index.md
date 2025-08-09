@@ -12,7 +12,7 @@ description: Complete documentation for ChartSmith MCP - The high-performance ch
 
 [Get Started →](getting-started/installation.md){: .btn .btn-primary}
 [View Examples →](examples/chart-gallery.md){: .btn .btn-secondary}
-[Deploy Now →](deployment/README.md){: .btn .btn-outline}
+[Deploy Now →](deployment/docker.md){: .btn .btn-outline}
 
 ## 📚 Documentation Sections
 
